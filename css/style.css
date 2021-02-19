@@ -97,7 +97,7 @@ nav li{
 }
 nav a{
   text-decoration: none;
-  /* color: #006aff; */
+  /* color: #006aff; #4d9bfd;*/
   color: black;
   font-size: 15px;
 }
@@ -155,46 +155,6 @@ nav img{
   }
 }
 
-/* Links navbar BS */
-header .navbar-default .navbar-nav>li>a{
-  color: black;
-  line-height: 30px;
-  font-weight: 500;
-  font-size: 14px;
-  vertical-align: middle;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-/* Icona freccia nei links */
-header .navbar-default .navbar-nav>li>a i{
-  vertical-align: middle;
-  margin-left: 2px;
-}
-/* Links navbar :hover*/
-header .navbar-default .navbar-nav>li>a:hover,
-header .navbar-default .navbar-nav>li>a:active{
-  color: #006aff;
-}
-header .navbar-default .navbar-nav>.open>a,
-header .navbar-default .navbar-nav>.open>a:focus,
-header .navbar-default .navbar-nav>.open>a:hover{
-  background-color: transparent;
-  color: #006aff;
-}
-/* Link btn BS header*/
-header .btn-primary.active,
-header .btn-primary:active,
-header .open>.dropdown-toggle.btn-primary{
-  background-color: transparent;
-  border-color: #4d9bfd;
-  height: 40px;
-  margin: 10px 0;
-  width: auto;
-}
-/* Link btn BS header -> Sign Up*/
-/* #lastbtn{
-  max-width: 72px;
-} */
 .lastbtn a{
   color: #4d9bfd;
   display: inline-block;
@@ -211,62 +171,6 @@ header .open>.dropdown-toggle.btn-primary{
   margin-top: 10px;
 }
 
-/* Hamburger BS */
-header .navbar-default .navbar-toggle{
-  border: 1px solid transparent;
-  margin: 13px 15px;
-}
-header .navbar-default .navbar-toggle .icon-bar{
-  background-color: #004aff;
-}
-/* BS bottone e navbar collapse visibili fino a 991px */
-@media (max-width: 1199px) {
-  .navbar-header {
-    float: none;
-  }
-  .navbar-left,.navbar-right {
-    float: none !important;
-  }
-  .navbar-toggle {
-    display: block;
-  }
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-    display: none!important;
-  }
-  .navbar-nav {
-    float: none!important;
-    margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-    float: none;
-  }
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .collapse.in{
-    display:block !important;
-  }
-  .navbar-nav .open .dropdown-menu {
-    position: static;
-    float: none;
-    width: auto;
-    margin-top: 0;
-    background-color: transparent;
-    border: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-}
-
 /* Poprietà main */
 /* Riga jumbojoin */
 .jumbojoin{
@@ -277,9 +181,16 @@ header .navbar-default .navbar-toggle .icon-bar{
   padding: 60px 0;
   margin-top: 60px;
 }
+.jumbojoin .contenitore0{
+  display: flex;
+}
   /* Titolo jumbo */
 .jumbojoin .big{
   font-size: calc(30px + 0.5vw);
+}
+.prova{
+  flex-basis: 60%;
+  margin-right: 10px;
 }
   /* Finestra bianca google */
 .googlesign{
@@ -287,9 +198,15 @@ header .navbar-default .navbar-toggle .icon-bar{
   padding: 15px 20px 30px;
   border-radius: 5px;
   overflow: hidden;
+  flex-basis: 40%;
+  margin-left: 10px;
 }
 .googlesign h3, .jumbojoin h2{
   font-weight: 700;
+  margin: 20px 0;
+}
+.googlesign h3{
+  font-size: 25px;
 }
   /* Login */
 .googlesign form input{
@@ -304,43 +221,59 @@ header .navbar-default .navbar-toggle .icon-bar{
 .googlesign p{
   margin-top: 10px;
 }
-
-/* Bottoni BS finestra bianca */
-.googlesign .btn-primary.active,
-.googlesign .btn-primary:active,
-.googlesign .open>.dropdown-toggle.btn-primary{
-  background-color: dodgerblue;
+/* Btn proprietà generali */
+.btn{
+  display: inline-block;
   width: 100%;
-  border-color:  dodgerblue;
-  margin: 0 0 5px;
+  min-height: 30px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
   font-size: 15px;
-  overflow: hidden;
   font-weight: 600;
+  margin: 0 0 5px;
 }
-/* Bottoni:hover BS finestra bianca :hover */
-.googlesign  .btn-primary.active:hover,
-.googlesign  .btn-primary.active:focus,
-.googlesign  .btn-primary:active:focus,
-.googlesign  .btn-primary:active:hover{
+/* Btn create */
+.googlesign .create{
+  background-color: dodgerblue;
+  color: white;
+  transition: background-color 0.5s
+}
+.googlesign .create:hover{
   background-color: blue;
-  border-color: blue;
-  transition: background-color 0.4s;
 }
-/* Bottoni BS google */
-.googlesign #google {
-  background-color: white;
-  border: 1px solid #cecece;
-  color: grey;
+/* Btn google */
+.btn#google{
   position: relative;
+  background-color: transparent;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  color: grey;
+  transition: opacity 0.7s;
+  box-shadow: inset 0 0 7px 0 #cecece;
 }
-.googlesign #google:hover {
+#google:hover{
   opacity: 0.5;
-  transition: opacity 0.5s;
 }
-/* Immagine btn BS google */
 #google img{
-  float: left;
+  position: absolute;
+  top: 9px;
+  left: 15px;
   height: 20px;
+  vertical-align: middle;
+}
+
+@media all and (max-width: 991px) {
+  .jumbojoin .contenitore0{
+    flex-wrap: wrap;
+  }
+  .prova, .googlesign{
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .prova{
+    margin-bottom: 30px;
+  }
 }
 /* Link termini di servizio */
 .googlesign .blue-link{
