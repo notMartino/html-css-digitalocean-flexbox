@@ -1,0 +1,559 @@
+/* Proprietà generali */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+  /* Container 10%, 0 */
+.contenitore, .contenitore0{
+  padding: 0 10%;
+}
+
+ul{
+  list-style-type: none;
+}
+  /* Container0 diminuise a Xpx */
+@media all and (max-width: 1199px) {
+  .contenitore0{
+    padding: 0 2%;
+  }
+}
+/* @media all and (max-width: 767px) {
+  .contenitore0{
+    padding: 0;
+  } */
+}
+  /* Proprietà generale sezione */
+section{
+  padding: 40px 0;
+}
+  /* Proprietà colori sfondo sezione */
+section.whiteback{
+  background-color: white;
+}
+section.greyback{
+  background-color: #f3f5f9;
+}
+  /* Proprietà testo */
+.align-center{
+  text-align: center;
+}
+  /* Colori testo */
+.white-text{
+  color: white;
+}
+.blue-text{
+  color: dodgerblue;
+}
+.navy-text{
+  color:#031c4e;
+}
+.black-text{
+  color: black;
+}
+.grey-text{
+  color: grey;
+}
+.paragrafo{
+  font-size: 16px;
+}
+/* Links blu */
+.blue-link{
+  text-decoration: none;
+  color: dodgerblue;
+}
+.blue-link:hover{
+  text-decoration: none;
+  color: blue;
+  transition: color 0.7s;
+}
+.blue-link i{
+  vertical-align: middle;
+}
+
+/* Poprietà header */
+header{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  position: relative;
+}
+nav li{
+  display: inline-block;
+  padding: 0 5px;
+}
+nav a{
+  text-decoration: none;
+  /* color: #006aff; */
+  color: black;
+  font-size: 15px;
+}
+nav li:hover a{
+  color: #006aff;
+}
+nav img{
+  height: 30px;
+}
+.hamburger{
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  width: 40px;
+  height: 35px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 3px;
+}
+.hamburger:hover{
+  color: #006aff;
+  background-color: #cecece;
+}
+.dropdown{
+  display: none;
+  background-color: white;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+.hamburger:hover .dropdown{
+  display: block;
+  position: absolute;
+  z-index: 950;
+  top: 80px;
+  left: 0;
+  box-shadow: 0 6px 10px 0 #cecece;
+}
+.hamburger:hover .dropdown ul{
+  display: block;
+}
+.dropdown li{
+  display: block;
+  padding: 0;
+  margin-bottom: 3px;
+}
+
+@media all and (max-width: 991px) {
+  .hamburger{
+    display: block;
+  }
+  nav.contenitore0 ul{
+    display: none;
+  }
+}
+
+/* Links navbar BS */
+header .navbar-default .navbar-nav>li>a{
+  color: black;
+  line-height: 30px;
+  font-weight: 500;
+  font-size: 14px;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+/* Icona freccia nei links */
+header .navbar-default .navbar-nav>li>a i{
+  vertical-align: middle;
+  margin-left: 2px;
+}
+/* Links navbar :hover*/
+header .navbar-default .navbar-nav>li>a:hover,
+header .navbar-default .navbar-nav>li>a:active{
+  color: #006aff;
+}
+header .navbar-default .navbar-nav>.open>a,
+header .navbar-default .navbar-nav>.open>a:focus,
+header .navbar-default .navbar-nav>.open>a:hover{
+  background-color: transparent;
+  color: #006aff;
+}
+/* Link btn BS header*/
+header .btn-primary.active,
+header .btn-primary:active,
+header .open>.dropdown-toggle.btn-primary{
+  background-color: transparent;
+  border-color: #4d9bfd;
+  height: 40px;
+  margin: 10px 0;
+  width: auto;
+}
+/* Link btn BS header -> Sign Up*/
+/* #lastbtn{
+  max-width: 72px;
+} */
+.lastbtn a{
+  color: #4d9bfd;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #4d9bfd;
+}
+.lastbtn a:hover{
+  color: white;
+  background-color: #4d9bfd;
+  transition: background-color 0.5s;
+}
+.dropdown .lastbtn a{
+  margin-top: 10px;
+}
+
+/* Hamburger BS */
+header .navbar-default .navbar-toggle{
+  border: 1px solid transparent;
+  margin: 13px 15px;
+}
+header .navbar-default .navbar-toggle .icon-bar{
+  background-color: #004aff;
+}
+/* BS bottone e navbar collapse visibili fino a 991px */
+@media (max-width: 1199px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+/* Poprietà main */
+/* Riga jumbojoin */
+.jumbojoin{
+  background-color: dodgerblue;
+  background-image: url("../img/jumbo.svg");
+  background-position: right 0 bottom 0;
+  background-size: cover;
+  padding: 60px 0;
+  margin-top: 60px;
+}
+  /* Titolo jumbo */
+.jumbojoin .big{
+  font-size: calc(30px + 0.5vw);
+}
+  /* Finestra bianca google */
+.googlesign{
+  background-color: white;
+  padding: 15px 20px 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.googlesign h3, .jumbojoin h2{
+  font-weight: 700;
+}
+  /* Login */
+.googlesign form input{
+  width: 100%;
+  min-height: 35px;
+  padding: 5px;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  color: black;
+}
+.googlesign p{
+  margin-top: 10px;
+}
+
+/* Bottoni BS finestra bianca */
+.googlesign .btn-primary.active,
+.googlesign .btn-primary:active,
+.googlesign .open>.dropdown-toggle.btn-primary{
+  background-color: dodgerblue;
+  width: 100%;
+  border-color:  dodgerblue;
+  margin: 0 0 5px;
+  font-size: 15px;
+  overflow: hidden;
+  font-weight: 600;
+}
+/* Bottoni:hover BS finestra bianca :hover */
+.googlesign  .btn-primary.active:hover,
+.googlesign  .btn-primary.active:focus,
+.googlesign  .btn-primary:active:focus,
+.googlesign  .btn-primary:active:hover{
+  background-color: blue;
+  border-color: blue;
+  transition: background-color 0.4s;
+}
+/* Bottoni BS google */
+.googlesign #google {
+  background-color: white;
+  border: 1px solid #cecece;
+  color: grey;
+  position: relative;
+}
+.googlesign #google:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+/* Immagine btn BS google */
+#google img{
+  float: left;
+  height: 20px;
+}
+/* Link termini di servizio */
+.googlesign .blue-link{
+  text-decoration: underline;
+}
+
+/* Riga partners */
+  /* Imgs riga partners */
+.partners img{
+  max-width: 100%;
+  min-height: 150px;
+  overflow: hidden;
+  padding: 0 10px;
+}
+  /* Imgs che cambiano altezza a Ypx */
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .partners img{
+    min-height: 120px;
+  }
+}
+@media all and (max-width: 767px){
+  .partners img{
+    min-height: 100px;
+  }
+}
+
+/* Riga deploy */
+.deploy p{
+  margin-bottom: 40px;
+}
+@media all and (max-width: 991px) {
+  .deploy p{
+    margin-bottom: 15px;
+  }
+}
+/* Lista riga deploy */
+.deploy ul{
+  list-style-type: none;
+  border-left: 2px solid #cecece;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.deploy li{
+  text-align: left;
+  padding: 10px 10px;
+}
+.deploy li a:hover,
+.deploy li a:focus{
+  color: darkgrey;
+  text-decoration: none;
+}
+  /* Finestra riga deploy */
+.deploy .finestra{
+  text-align: left;
+}
+
+/* Riga designed con slide */
+.slide{
+  position: relative;
+}
+.slide img{
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+  /* Proprietà icone slide img e slide div */
+.slide i, .slide-window a:not(.blue-link) i{
+  font-size: 30px;
+  vertical-align: middle;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+  /* Icone scompaiono a Ypx */
+@media all and (max-width: 767px) {
+  .slide i, .slide-window i{
+    display: none;
+  }
+}
+  /* Icona freccia SX */
+.slide i.left, .slide-window i.left{
+  color: grey;
+  margin-right: 2%;
+  top: 50%;
+  left: -30px;
+}
+  /* Icona freccia DX */
+.slide i.right, .slide-window i.right{
+  color: navy;
+  margin-left: 2%;
+  top: 50%;
+  right: -30px;
+}
+  /* Pallini blu slide */
+.blue-dot{
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid dodgerblue;
+  border-radius: 50%;
+}
+.blue-dot:hover, .blue-dot.clicked{
+    background-color: dodgerblue;
+}
+
+/* Riga features */
+.features{
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Riga region */
+.region, .prefooter{
+  background: linear-gradient(to bottom, #0048c5 50%, #001e9a 100%);
+}
+  /* tabella regioni */
+.region table{
+  width: 100%;
+  margin: 10px 0 30px;
+}
+  /* Riga tabella */
+.region tr {
+  border-bottom: 1px solid white;
+}
+.region tr:last-child {
+  border-bottom-width: 0;
+}
+  /* Colonna tabella */
+.region td{
+  padding: 10px 15px;
+  text-align: left;
+}
+.region tr td:last-child{
+  text-align: right;
+}
+.region table a{
+  color: #00d5d1;
+}
+
+/* Riga developmente slide */
+.slide-window{
+  background-color: white;
+  position: relative;
+  min-height: 150px;
+  padding: 50px 10px;
+  width: 100%;
+  margin: 40px 0 20px;
+}
+.slide-window img{
+  margin: 20px 10px 10px;
+  width: 220px;
+  max-width: 85%;
+}
+.slide-window p{
+  margin: 10px;
+}
+.slide-window h5{
+  margin: 15px 10px 0;
+}
+.slide-window div{
+  margin-bottom: 20px;
+}
+
+/* Riga prefooter */
+.prefooter h2{
+  margin-bottom: 30px;
+}
+ /* BS btn create account */
+.prefooter .btn-primary.active,
+.prefooter .btn-primary:active,
+.prefooter .open>.dropdown-toggle.btn-primary{
+  background-color: white;
+  color: dodgerblue;
+  border-width: 0;
+}
+.prefooter .btn-primary.active:focus,
+.prefooter .btn-primary.active:hover,
+.prefooter .btn-primary.active:focus,
+.prefooter .btn-primary.active:hover{
+  opacity: 0.7;
+  transition: 0.8s;
+}
+
+/* Proprietà footer */
+footer{
+  padding: 50px 0 30px;
+  background-color: #031c4e;
+  min-height: 400px;
+}
+footer img{
+  margin-bottom: 10px;
+}
+footer p{
+  margin-bottom: 0;
+}
+footer span{
+  color: #7a859d;
+}
+footer ul{
+  list-style-type: none;
+}
+footer li{
+  margin-bottom: 10px;
+}
+footer .non-block li{
+  display: inline-block;
+}
+footer a{
+  color: grey;
+}
+footer a:hover{
+  color: white;
+  text-decoration: none;
+}
+footer i{
+  margin: 15px 7px 5px 0;
+}
