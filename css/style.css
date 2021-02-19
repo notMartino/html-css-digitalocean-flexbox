@@ -74,6 +74,18 @@ section.greyback{
 .blue-link i{
   vertical-align: middle;
 }
+/* Btn proprietà generali */
+.btn{
+  display: inline-block;
+  width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 5px;
+}
 
 /* Poprietà header */
 header{
@@ -221,18 +233,7 @@ nav img{
 .googlesign p{
   margin-top: 10px;
 }
-/* Btn proprietà generali */
-.btn{
-  display: inline-block;
-  width: 100%;
-  min-height: 30px;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 600;
-  margin: 0 0 5px;
-}
+
 /* Btn create */
 .googlesign .create{
   background-color: dodgerblue;
@@ -282,21 +283,39 @@ nav img{
 
 /* Riga partners */
   /* Imgs riga partners */
+.partners{
+  padding: 40px 0;
+}
+.partners h4{
+  font-size: 18px;
+  font-weight: 500;
+}
+.partners .flexa{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
 .partners img{
   max-width: 100%;
-  min-height: 150px;
   overflow: hidden;
   padding: 0 10px;
 }
+
   /* Imgs che cambiano altezza a Ypx */
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 1200px){
   .partners img{
-    min-height: 120px;
+    min-height: 110px;
+  }
+}
+ @media all and (min-width: 768px) and (max-width: 1199px) {
+  .partners img{
+    min-height: 100px;
   }
 }
 @media all and (max-width: 767px){
   .partners img{
-    min-height: 100px;
+    min-height: 90px;
   }
 }
 
