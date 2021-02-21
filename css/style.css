@@ -384,8 +384,29 @@ text-align: left;
 }
 
 /* Riga designed con slide */
+.contenitore.slider{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.slider div:not(.slide){
+  order: 4;
+}
+.slider p.navy-text{
+  order: 5;
+}
+.slider h2{
+  order: 3;
+}
+.slider .slide{
+  order: 2;
+}
+
 .slide{
   position: relative;
+  margin-top: 30px;
+  width: 70%;
 }
 .slide img{
   max-width: 100%;
