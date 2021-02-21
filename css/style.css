@@ -540,8 +540,8 @@ text-align: left;
   position: relative;
   min-height: 150px;
   padding: 50px 10px;
-  width: 100%;
-  margin: 40px 0 20px;
+  width: 70%;
+  margin: 40px auto 20px;
 }
 .slide-window img{
   margin: 20px 10px 10px;
@@ -584,6 +584,21 @@ footer{
   background-color: #031c4e;
   min-height: 400px;
 }
+
+footer .contenitore0{
+  display: flex;
+  justify-content: space-between;
+}
+@media all and (max-width: 991px) {
+  footer .contenitore0{
+    flex-wrap: wrap;
+  }
+  footer .contenitore0 > *{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 footer img{
   margin-bottom: 10px;
 }
@@ -604,6 +619,7 @@ footer .non-block li{
 }
 footer a{
   color: grey;
+  text-decoration: none;
 }
 footer a:hover{
   color: white;
