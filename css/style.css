@@ -406,7 +406,7 @@ text-align: left;
 .slide{
   position: relative;
   margin-top: 30px;
-  width: 70%;
+  width: 65%;
 }
 .slide img{
   max-width: 100%;
@@ -423,6 +423,11 @@ text-align: left;
 @media all and (max-width: 767px) {
   .slide i, .slide-window i{
     display: none;
+  }
+}
+@media all and (max-width: 991px) {
+  .slide {
+    width: 100%;
   }
 }
   /* Icona freccia SX */
@@ -453,11 +458,42 @@ text-align: left;
 }
 
 /* Riga features */
+.feat {
+  display: flex;
+  flex-direction: row;
+}
 .features{
   margin-top: 20px;
   text-align: left;
+  padding-right: 20px;
+}
+.features:last-child{
+  padding-right: 0;
 }
 
+@media all and (max-width: 991px) {
+  .feat{
+    flex-direction: column;
+  }
+  .features{
+    padding: 0;
+  }
+  .features:first-child{
+    align-self: flex-start;
+  }
+  .features:nth-child(2){
+    align-self: center;
+    text-align: center;
+  }
+  .features:last-child{
+    align-self: flex-end;
+    text-align: right;
+  }
+}
+
+.features h4, .features img, .features p {
+  margin-bottom: 7px;
+}
 /* Riga region */
 .region, .prefooter{
   background: linear-gradient(to bottom, #0048c5 50%, #001e9a 100%);
