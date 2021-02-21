@@ -499,10 +499,22 @@ text-align: left;
   background: linear-gradient(to bottom, #0048c5 50%, #001e9a 100%);
 }
   /* tabella regioni */
-.region table{
-  width: 100%;
-  margin: 10px 0 30px;
+.flextable{
+  display: flex;
 }
+.region table{
+  margin: 10px 0 30px;
+  width: 50%;
+}
+@media all and (max-width: 991px) {
+  .flextable{
+    flex-direction: column;
+  }
+  .region table{
+    width: 100%;
+  }
+}
+
   /* Riga tabella */
 .region tr {
   border-bottom: 1px solid white;
