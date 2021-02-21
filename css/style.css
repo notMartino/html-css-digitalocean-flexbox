@@ -26,7 +26,7 @@ ul{
   .contenitore0{
     padding: 0;
   } */
-}
+
   /* Proprietà generale sezione */
 section{
   padding: 40px 0;
@@ -76,8 +76,8 @@ section.greyback{
 }
 /* Btn proprietà generali */
 .btn{
+  cursor: pointer;
   display: inline-block;
-  width: 100%;
   min-height: 30px;
   padding: 10px;
   text-decoration: none;
@@ -235,16 +235,18 @@ nav img{
 }
 
 /* Btn create */
-.googlesign .create{
+.googlesign .btn.create{
+  width: 100%;
   background-color: dodgerblue;
   color: white;
   transition: background-color 0.5s
 }
-.googlesign .create:hover{
+.googlesign .btn.create:hover{
   background-color: blue;
 }
 /* Btn google */
 .btn#google{
+  width: 100%;
   position: relative;
   background-color: transparent;
   border: 1px solid #cecece;
@@ -261,7 +263,6 @@ nav img{
   top: 9px;
   left: 15px;
   height: 20px;
-  vertical-align: middle;
 }
 
 @media all and (max-width: 991px) {
@@ -321,32 +322,65 @@ nav img{
 
 /* Riga deploy */
 .deploy p{
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 @media all and (max-width: 991px) {
   .deploy p{
     margin-bottom: 15px;
   }
 }
+
+/* Sezoioni flex deploy */
+.sezioni-deploy{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0 5%;
+}
+/* Finestra riga deploy */
+.sezioni-deploy .finestra{
+text-align: left;
+}
+
+.sezioni-deploy > *{
+  flex-basis: calc(100% / 3);
+  padding: 5px 15px;
+}
+.sezioni-deploy > ul{
+  flex-basis: 25%;
+}
+@media all and (max-width: 991px) {
+  .sezioni-deploy{
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .sezioni-deploy > *{
+    flex-basis: 100%;
+  }
+  .sezioni-deploy ul{
+    margin-bottom: 30px;
+  }
+}
+
 /* Lista riga deploy */
-.deploy ul{
-  list-style-type: none;
+.sezioni-deploy ul{
   border-left: 2px solid #cecece;
   font-size: 16px;
-  margin-bottom: 50px;
+  padding: 0;
 }
-.deploy li{
+.sezioni-deploy li{
   text-align: left;
   padding: 10px 10px;
 }
-.deploy li a:hover,
-.deploy li a:focus{
-  color: darkgrey;
+.sezioni-deploy li a{
   text-decoration: none;
 }
-  /* Finestra riga deploy */
-.deploy .finestra{
-  text-align: left;
+.sezioni-deploy li a:hover,
+.sezioni-deploy li a:focus{
+  color: darkgrey;
+}
+.sezioni-deploy img, .sezioni-deploy h4{
+  margin-bottom: 8px;
 }
 
 /* Riga designed con slide */
